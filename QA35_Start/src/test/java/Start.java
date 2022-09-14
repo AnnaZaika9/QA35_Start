@@ -30,28 +30,57 @@ public class Start {
     //css
     WebElement elc1 = wd.findElement(By.cssSelector("#skip-to-content")); //id
     WebElement elc2 = wd.findElement(By.cssSelector(".visually-hidden")); //class
-    WebElement elc3 = wd.findElement(By.cssSelector("[data-testid='smallnav']"));
+    WebElement elc3 = wd.findElement(By.cssSelector("[data-testid='smallnav']")); // []атрибут значения
+
+    ////xPath
+    WebElement elx1 = wd.findElement(By.xpath("//*[@id='skip-to-content']")); //id
+    WebElement elx2 = wd.findElement(By.xpath("//*[@class='visually-hidden']")); //class
+    WebElement elx3 = wd.findElement(By.xpath("//*[@data-testid='smallnav']")); // []атрибут значения
+
 
 
     //for log in
-    WebElement l1 = wd.findElement(By.cssSelector("[href='/login']")); //atribute
-    WebElement l2 = wd.findElement(By.cssSelector("#user"));
-    WebElement l3 = wd.findElement((By.cssSelector("#login")));
-    WebElement l4 = wd.findElement((By.cssSelector("#password")));
-    WebElement l5 = wd.findElement((By.cssSelector("#login-submit")));
+    WebElement li1 = wd.findElement(By.cssSelector("[href='/login']")); //atribute
+    WebElement lix1 = wd.findElement(By.xpath("//a[@href='/login']"));
 
-    WebElement l6 = wd.findElement((By.cssSelector("[data-test-id='header-member-menu-button']")));
-    WebElement l7 = wd.findElement((By.cssSelector(".m2N684FcksCyfT")));
+    WebElement li2 = wd.findElement(By.cssSelector("#user"));
+    WebElement lix2 = wd.findElement(By.xpath("//*[@id='user']"));
+
+    WebElement li3 = wd.findElement(By.cssSelector("#login"));
+    WebElement lix3 = wd.findElement(By.xpath("//*[@id='login']"));
+
+    WebElement li4 = wd.findElement((By.cssSelector("#password")));
+    WebElement lix4 = wd.findElement(By.xpath("//*[@id='password']"));
+
+    WebElement li5 = wd.findElement((By.cssSelector("#login-submit")));
+    WebElement lix5 = wd.findElement(By.xpath("//*[@id='login-submit']"));
+
+    WebElement li6 = wd.findElement((By.cssSelector("[data-test-id='header-member-menu-button']")));
+    WebElement lix6 = wd.findElement(By.xpath("//*[@data-test-id='header-member-menu-button']"));
+
+    WebElement li7 = wd.findElement((By.cssSelector(".m2N684FcksCyfT")));
+    WebElement lix7 = wd.findElement(By.xpath("//*[@class='m2N684FcksCyfT']"));
 
     //lod out
-    WebElement l8 = wd.findElement(By.cssSelector("[data-test-id='header-member-menu-button']"));
-    WebElement l9 = wd.findElement(By.cssSelector("[data-test-id='header-member-menu-logout']"));
-    WebElement l10 = wd.findElement(By.cssSelector("#logout-submit"));
+    WebElement li8 = wd.findElement(By.cssSelector("[data-test-id='header-member-menu-button']"));
+    WebElement li9 = wd.findElement(By.cssSelector("[data-test-id='header-member-menu-logout']"));
+    WebElement li10 = wd.findElement(By.cssSelector("#logout-submit"));
 
     //main page
-    WebElement l11 = wd.findElement(By.cssSelector("[href='/home']"));
-    WebElement l12 = wd.findElement(By.cssSelector("[data-testid='logo_link']"));
-    WebElement l13 = wd.findElement(By.cssSelector("[data-testid='bignav-tab']"));
+    WebElement li11 = wd.findElement(By.cssSelector("[href='/home']"));
+    WebElement li12 = wd.findElement(By.cssSelector("[data-testid='logo_link']"));
+    WebElement li13 = wd.findElement(By.cssSelector("[data-testid='bignav-tab']"));
+
+    //starts/contains-ends(css)
+    WebElement el557 = wd.findElement(By.cssSelector("[aria-label='Trello']"));
+    WebElement el559 = wd.findElement(By.cssSelector("[aria-label $='llo']"));//ends
+    WebElement el558 = wd.findElement(By.cssSelector("[aria-label ^='Tr']")); //starts
+    WebElement el57 = wd.findElement(By.cssSelector("[aria-label *='rell']")); //contains
+
+    //starts/contains-ends(xPath)
+    WebElement elxp1 = wd. findElement(By.xpath("//*[@aria-label='Trello']"));
+    WebElement elxp2 = wd.findElement(By.xpath("//*[contains(@aria-label,'rel')]")); //contains
+    WebElement elxp3 = wd.findElement(By.xpath("//*[starts-with(@aria-label,'Tr')]")); //starts
 
 
 
